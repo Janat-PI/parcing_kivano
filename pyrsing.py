@@ -55,7 +55,7 @@ def get_page_data(html):
             price = product.find('div', class_='listbox_price').find('strong').text
             price = int(price.replace('сом', ''))
             if price > 35000 and price < 58000:
-                price = price
+                price = f'{price} + com'
             else:
                 price = ''
         except:
